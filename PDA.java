@@ -17,20 +17,32 @@ public class PDA
         // We don't need to do anything in the constructor for
         // our program.
     }
-    
+
     /**
      * This is the main event loop for our PDA program
      */
     public void runEventLoop() {
-    while (true) {
-        Scanner scanner = new Scanner (System.in);
-        System.out.println("How old are you?");
-        int age = 0;
-        
-}
-   
-    }
+        while (true) {
+            System.out.println ("How old are you?");
+            try {
+                Scanner scanner = new Scanner (System.in);
+                int age = 0;
+                age = scanner.nextInt();
+            } catch (InputMismatchException error) {
+                System.out.println("Please enter an integer");
+            }
+            int LOWER_BOUND = 0;
+            int age = 0;
+            if (age < LOWER_BOUND) {
+                System.out.println(age+" is too young!!");
+            }
+            int lowerrange = (age/2)+7;
+            int upperrange = (age-7)*2;
+            System.out.println ("you can date people from " + lowerrange + " to " + upperrange);
+        }
 
+    }
+    
     /**
      * The main method instantiates and runs the program
      */
