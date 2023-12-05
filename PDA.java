@@ -24,8 +24,9 @@ public class PDA
     public void runEventLoop() {
         while (true) {
             System.out.println ("How old are you?");
+            boolean user = true;
             int age = 0;
-            int LOWER_BOUND = 0;
+            int LOWER_BOUND = 14;
             Scanner scanner = new Scanner (System.in);
             try{
                 age = scanner.nextInt();
